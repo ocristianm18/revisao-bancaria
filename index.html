@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Análise de Contrato Bancário</title>
+
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+background:#f4f6f8;
+color:#2B2E34;
+}
+
+header{
+background:#000000;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+h1{
+color:#F3BA5C;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:30px;
+}
+
+.box{
+background:white;
+padding:25px;
+margin-bottom:25px;
+border-radius:8px;
+box-shadow:0px 2px 10px rgba(0,0,0,0.1);
+}
+
+button{
+background:#F3BA5C;
+color:black;
+border:none;
+padding:15px 25px;
+font-size:16px;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#dca84f;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:15px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#000;
+color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Análise de Contratos Bancários</h1>
+
+<p>Descubra se seu empréstimo, consignado ou cartão possui juros abusivos.</p>
+
+<button onclick="document.getElementById('diagnostico').scrollIntoView()">
+Fazer diagnóstico gratuito
+</button>
+
+</header>
+
+<div class="container">
+
+<div class="box">
+
+<h2>Problemas comuns que encontramos em contratos</h2>
+
+<ul>
+
+<li>Juros abusivos</li>
+
+<li>Cartão consignado com dívida infinita</li>
+
+<li>Parcelas que não diminuem o saldo</li>
+
+<li>Descontos indevidos no benefício do INSS</li>
+
+<li>Contratos com cláusulas irregulares</li>
+
+</ul>
+
+</div>
+
+<div class="box">
+
+<h2>Quem realiza a análise</h2>
+
+<p>
+
+Assistente Técnico Financeiro especializado em:
+
+</p>
+
+<ul>
+
+<li>Revisão de contratos bancários</li>
+
+<li>Análise de consignados</li>
+
+<li>Cálculos financeiros</li>
+
+<li>Suporte técnico para advogados</li>
+
+<li>Perícia contábil financeira</li>
+
+</ul>
+
+</div>
+
+<div class="box">
+
+<h2>Como funciona</h2>
+
+<p>
+
+1️⃣ Você envia seu contrato ou extrato  
+<br><br>
+
+2️⃣ É feita uma análise técnica dos juros e cláusulas  
+<br><br>
+
+3️⃣ Você recebe um parecer técnico com possíveis irregularidades  
+
+</p>
+
+</div>
+
+<div class="box" id="diagnostico">
+
+<h2>Diagnóstico rápido</h2>
+
+<form id="form">
+
+<label>Você possui qual tipo de contrato?</label>
+
+<select id="contrato">
+<option>Empréstimo consignado</option>
+<option>Cartão consignado</option>
+<option>Cartão de crédito</option>
+<option>Financiamento</option>
+<option>Outro</option>
+</select>
+
+<label>Seu desconto ocorre onde?</label>
+
+<select id="desconto">
+<option>Benefício INSS</option>
+<option>Salário</option>
+<option>Conta bancária</option>
+<option>Boleto</option>
+</select>
+
+<label>Seu nome</label>
+
+<input type="text" id="nome">
+
+<label>WhatsApp</label>
+
+<input type="text" id="whatsapp">
+
+<button type="button" onclick="enviar()">Enviar para análise</button>
+
+</form>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>Atendimento técnico financeiro</p>
+
+<p>Suporte para revisão de contratos e cálculos financeiros</p>
+
+</footer>
+
+<script>
+
+function enviar(){
+
+var nome=document.getElementById("nome").value
+var contrato=document.getElementById("contrato").value
+var desconto=document.getElementById("desconto").value
+var telefone=document.getElementById("whatsapp").value
+
+var mensagem="Olá, meu nome é "+nome+
+"%0AContrato: "+contrato+
+"%0ADesconto: "+desconto+
+"%0AGostaria de analisar meu contrato."
+
+var url="https://wa.me/5588996522411?text="+mensagem
+
+window.open(url)
+
+}
+
+</script>
+
+</body>
+
+  </html>
